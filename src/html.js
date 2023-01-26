@@ -28,6 +28,10 @@ export default class Html extends PureComponent {
       <html lang="zh-TW">
         <head>
           <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"
+          ></script>
+          <script
             async
             src="https://www.googleoptimize.com/optimize.js?id=OPT-NGNDMW8"
           />
