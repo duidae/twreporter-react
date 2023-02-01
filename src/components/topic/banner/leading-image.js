@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import Helmet from 'react-helmet'
 import constPropTypes from '../../../constants/prop-types'
 import styled from 'styled-components'
 import { replaceGCSUrlOrigin } from '@twreporter/core/lib/utils/storage-url-processor'
@@ -12,7 +13,7 @@ const _ = {
   get,
 }
 
-const FullScreenContainer = styled.figure`
+const FullScreenContainer = styled.div`
   width: 100vw;
   height: ${props => props.viewportHeight};
 `
@@ -141,6 +142,14 @@ class LeadingImage extends React.PureComponent {
     ) : (
       <ImgFallback url={replaceGCSUrlOrigin(_.get(imgSet, 'desktop.url'))} />
     )
+    const p5Demo = (
+      <script
+        type="text/javascript"
+        dangerouslySetInnerHTML={{
+          __html: `const ukraine=$=>{particles1=[],particles2=[],noiseScale=.01/1.5,n=.1,a=.01,a2=.01;let o=0,r,e;function t($){return $.x<r&&$.y<e&&$.x>0&&$.y>0}$.setup=function(){let o=$.select("#c1");for(r=o?o.width:600,e=o?o.height:600,$.createCanvas(r,e),$.background(255),i=0;i<2e3;i++)particles1.push($.createVector(0,$.random(-100,e/2))),particles2.push($.createVector(0,$.random(e/2,e+100)))},$.draw=function(){for(i=0;i<500;i++)p1=particles1[i],p2=particles2[i],$.strokeWeight($.map($.sin(a+a2),-1,1,0,$.random(3,$.random(5,$.random(10,15))))),$.stroke(0,0,$.random(0,255),$.map($.sin(a),-1,1,10,200)),$.point(p1.x,p1.y),o=$.random($.random(100,250),255),$.stroke(o,o-50,0,$.map($.sin(a),-1,1,10,200)),$.point(p2.x,p2.y),n=$.noise(p1.x*noiseScale,p1.y*noiseScale,$.frameCount/noiseScale),a=$.TAU*n,n2=$.noise(p2.x*noiseScale,p2.y*noiseScale,$.frameCount/noiseScale),a2=$.TAU*n2,p1.x+=-($.cos(a)-$.random(-.5,.5)),p1.y+=$.sin(a),p2.x+=-($.cos(a2)-$.random(-.5,.5)),p2.y+=$.sin(a2),t(p1)||(p1.x=0,p1.y=$.random(-100,e/2)),t(p2)||(p2.x=0,p2.y=$.random(e/2,e+100))}};new p5(ukraine,"c1");`,
+        }}
+      />
+    )
     return (
       <FullScreenContainer
         viewportHeight={viewportHeight}
@@ -148,7 +157,15 @@ class LeadingImage extends React.PureComponent {
         itemScop
         itemType="http://schema.org/ImageObject"
       >
-        {imgJSX}
+        {false && imgJSX}
+        <div id="c1" style={{ width: '100%', height: '100%' }}></div>
+        {p5Demo}
+        <Helmet>
+          <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"
+          ></script>
+        </Helmet>
       </FullScreenContainer>
     )
   }
