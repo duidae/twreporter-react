@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 // import mq from '../utils/media-query'
 
 import { LogoHeader } from '@twreporter/react-components/lib/logo'
 import Divider from '@twreporter/react-components/lib/divider'
+import Toggle from './Toggle'
 
 const Step = Object.freeze({ Newsletter: 'newsletter', Category: 'category' })
 
@@ -92,6 +94,17 @@ const Control = styled.div`
   flex-direction: row;
   justify-content: space-between;
 `
+const OptionContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`
+
+const OptionContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`
 
 const Title = styled.div``
 
@@ -99,9 +112,26 @@ const Desc = styled.div``
 
 const Label = styled.div``
 
-const Toggle = styled.div``
+const Checkbox = ({
+  key = '',
+  label = '',
+  value = false,
+  onClick = () => {},
+}) => {
+  return (
+    <div key={key}>
+      <input type="checkbox" checked={value} onChange={onClick} />
+      <label>{label}</label>
+    </div>
+  )
+}
 
-const Checkbox = styled.div``
+Checkbox.propTypes = {
+  value: PropTypes.bool.isRequired,
+  key: PropTypes.string,
+  label: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
+}
 
 const Previous = styled.div``
 
@@ -145,15 +175,17 @@ const Subscription = () => {
   const renderNewsletterOptions = () => {
     return settings[Step.Newsletter].options.map((option, index) => {
       return (
-        <div key={`newsletter-option-${index}`}>
-          <Title>{option.text}</Title>
-          <Desc>{option.desc}</Desc>
-          <Label>{option.label}</Label>
+        <OptionContainer key={`newsletter-option-${index}`}>
+          <OptionContent>
+            <Title>{option.text}</Title>
+            <Label>{option.label}</Label>
+            <Desc>{option.desc}</Desc>
+          </OptionContent>
           <Toggle
             value={newsletterSubscriptions[index]}
             onClick={index => onClickNewsletterSubscriptions(index)}
           />
-        </div>
+        </OptionContainer>
       )
     })
   }
