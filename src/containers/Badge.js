@@ -6,6 +6,7 @@ import { P2 } from '@twreporter/react-components/lib/text/paragraph'
 
 const Container = styled.div`
   background: white;
+  padding: 2px 4px;
 `
 
 export const Badge = ({ text = '', ...props }) => {
