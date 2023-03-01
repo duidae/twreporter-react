@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 // import mq from '../utils/media-query'
 
@@ -13,6 +12,7 @@ import { colorGrayscale } from '@twreporter/core/lib/constants/color'
 // TODO: move to react-components
 import { Toggle, POSITION } from './Toggle'
 import { Badge } from './Badge'
+import { Checkbox } from './Checkbox'
 
 const Step = Object.freeze({ Newsletter: 'newsletter', Category: 'category' })
 
@@ -139,27 +139,6 @@ const TitleContainer = styled.div`
   margin-top: 24px;
   margin-bottom: 24px;
 `
-
-const Checkbox = ({
-  key = '',
-  label = '',
-  value = false,
-  onClick = () => {},
-}) => {
-  return (
-    <div key={key}>
-      <input type="checkbox" checked={value} onChange={onClick} />
-      <label>{label}</label>
-    </div>
-  )
-}
-
-Checkbox.propTypes = {
-  value: PropTypes.bool.isRequired,
-  key: PropTypes.string,
-  label: PropTypes.string,
-  onClick: PropTypes.func.isRequired,
-}
 
 const Previous = styled.div``
 
