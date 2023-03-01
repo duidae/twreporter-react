@@ -83,6 +83,7 @@ const Header = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding: 16px 24px;
 `
 
 const Body = styled.div`
