@@ -5,6 +5,9 @@ import styled from 'styled-components'
 
 import { LogoHeader } from '@twreporter/react-components/lib/logo'
 import Divider from '@twreporter/react-components/lib/divider'
+import { H4 } from '@twreporter/react-components/lib/text/headline'
+import { P1 } from '@twreporter/react-components/lib/text/paragraph'
+import { colorGrayscale } from '@twreporter/core/lib/constants/color'
 import { Position, Toggle } from './Toggle'
 
 const Step = Object.freeze({ Newsletter: 'newsletter', Category: 'category' })
@@ -87,6 +90,10 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  border: 1px solid ${colorGrayscale.gray300};
+  border-radius: 8px;
 `
 
 const Control = styled.div`
@@ -166,8 +173,8 @@ const Subscription = () => {
     const title = settings[step].title
     return title ? (
       <React.Fragment>
-        <Title>{title.text}</Title>
-        <Desc>{title.desc}</Desc>
+        <H4 text={title.text} />
+        <P1 text={title.desc} />
       </React.Fragment>
     ) : null
   }
