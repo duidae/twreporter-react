@@ -183,6 +183,7 @@ const Subscription = () => {
           </OptionContent>
           <Toggle
             value={newsletterSubscriptions[index]}
+            text={['訂閱', '未訂閱']}
             onClick={index => onClickNewsletterSubscriptions(index)}
           />
         </OptionContainer>
