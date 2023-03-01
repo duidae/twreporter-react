@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-// import mq from '../utils/media-query'
+import mq from '../utils/media-query'
 
 import { LogoHeader } from '@twreporter/react-components/lib/logo'
 import Divider from '@twreporter/react-components/lib/divider'
@@ -73,7 +73,10 @@ const Container = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
+  ${mq.tabletAndAbove`
+    justify-content: center;
+  `}
 `
 
 const Header = styled.div`
@@ -83,15 +86,23 @@ const Header = styled.div`
 `
 
 const Body = styled.div`
-  margin-top: 24px;
-  margin-bottom: 24px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  ${mq.mobileOnly`
+    padding-left: 24px;
+    padding-right: 24px;
+  `}
 `
 
 const Content = styled.div`
   max-width: 432px;
+  ${mq.mobileOnly`
+max-width: 342px;
+`}
   display: flex;
   flex-direction: column;
   justify-content: center;
