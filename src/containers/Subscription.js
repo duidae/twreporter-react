@@ -148,14 +148,10 @@ const TitleContainer = styled.div`
   margin-bottom: 24px;
 `
 
-const Previous = styled.div`
+const StepContainer = styled.div`
   display: flex;
   flex-direction: row;
-`
-
-const Next = styled.div`
-  display: flex;
-  flex-direction: row;
+  cursor: pointer;
 `
 
 const Subscription = () => {
@@ -260,22 +256,22 @@ const Subscription = () => {
       <Control>
         {step === Step.Newsletter ? (
           <React.Fragment>
-            <Previous disabled={true} />
-            <Next onClick={goToCategorySettings}>
+            <StepContainer disabled={true} />
+            <StepContainer onClick={goToCategorySettings}>
               <P1 text="下一步" />
               <Arrow direction="right" releaseBranch={'master'} />
-            </Next>
+            </StepContainer>
           </React.Fragment>
         ) : (
           <React.Fragment>
-            <Previous onClick={backToNewsletterSettings}>
+            <StepContainer onClick={backToNewsletterSettings}>
               <Arrow direction="left" releaseBranch={'master'} />
               <P1 text="上一步" />
-            </Previous>
-            <Next onClick={finishSettings}>
+            </StepContainer>
+            <StepContainer onClick={finishSettings}>
               <P1 text="完成" />
               <Arrow direction="right" releaseBranch={'master'} />
-            </Next>
+            </StepContainer>
           </React.Fragment>
         )}
       </Control>
