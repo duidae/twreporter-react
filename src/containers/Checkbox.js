@@ -1,6 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import styled from 'styled-components'
+import styled from 'styled-components'
+import { P1 } from '@twreporter/react-components/lib/text/paragraph'
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: 'row';
+`
 
 export const Checkbox = ({
   key = '',
@@ -9,10 +15,10 @@ export const Checkbox = ({
   onClick = () => {},
 }) => {
   return (
-    <div key={key}>
+    <Container key={key}>
       <input type="checkbox" checked={value} onChange={onClick} />
-      <label>{label}</label>
-    </div>
+      <P1 text={label} />
+    </Container>
   )
 }
 

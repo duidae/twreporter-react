@@ -114,10 +114,17 @@ const NewsletterOptionsContainer = styled.div`
   margin-top: 24px;
   margin-bottom: 24px;
 `
+const CategoryContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  margin-bottom: 24px;
+`
 
 const CategoryOptionsContainer = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: 24px;
   margin-bottom: 24px;
@@ -203,21 +210,23 @@ const Subscription = () => {
 
   const renderCategoryOptions = () => {
     return (
-      <CategoryOptionsContainer>
-        {settings[Step.Category].options.map((option, index) => (
-          <Checkbox
-            key={`category-option-${index}`}
-            label={option}
-            value={categorySelections[index]}
-            onClick={index => onClickCategorySelections(index)}
-          />
-        ))}
+      <CategoryContent>
+        <CategoryOptionsContainer>
+          {settings[Step.Category].options.map((option, index) => (
+            <Checkbox
+              key={`category-option-${index}`}
+              label={option}
+              value={categorySelections[index]}
+              onClick={index => onClickCategorySelections(index)}
+            />
+          ))}
+        </CategoryOptionsContainer>
         <Checkbox
           label="以上皆是我感興趣的議題"
           value={false}
           onClick={onClickAllCategorySelections}
         />
-      </CategoryOptionsContainer>
+      </CategoryContent>
     )
   }
 
