@@ -1,6 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import {
+  colorBrand,
+  colorGrayscale,
+} from '@twreporter/core/lib/constants/color'
 
 const Container = styled.div`
   display: flex;
@@ -16,10 +20,10 @@ const Label = styled.label`
 
 const Switch = styled.div`
   position: relative;
-  width: 50px;
-  height: 28px;
-  background: #b3b3b3;
-  border-radius: 32px;
+  width: 40px;
+  height: 20px;
+  background: ${colorGrayscale.gray600};
+  border-radius: 20px;
   padding: 4px;
   transition: 300ms all;
 
@@ -27,11 +31,11 @@ const Switch = styled.div`
     transition: 300ms all;
     content: '';
     position: absolute;
-    width: 28px;
-    height: 28px;
-    border-radius: 35px;
+    width: 16px;
+    height: 16px;
+    border-radius: 20px;
     top: 50%;
-    left: 4px;
+    left: 2px;
     background: white;
     transform: translate(0, -50%);
   }
@@ -42,9 +46,9 @@ const Input = styled.input`
   position: absolute;
 
   &:checked + ${Switch} {
-    background: green;
+    background: ${colorBrand.heavy};
     &:before {
-      transform: translate(32px, -50%);
+      transform: translate(20px, -50%);
     }
   }
 `
