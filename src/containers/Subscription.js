@@ -100,6 +100,8 @@ const Control = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 24px;
+  margin-bottom: 24px;
 `
 const OptionContainer = styled.div`
   display: flex;
@@ -243,12 +245,18 @@ const Subscription = () => {
         {step === Step.Newsletter ? (
           <React.Fragment>
             <Previous disabled={true} />
-            <Next onClick={goToCategorySettings}>下一步</Next>
+            <Next onClick={goToCategorySettings}>
+              <P1 text="下一步" />
+            </Next>
           </React.Fragment>
         ) : (
           <React.Fragment>
-            <Previous onClick={backToNewsletterSettings}>上一步</Previous>
-            <Next onClick={finishSettings}>完成</Next>
+            <Previous onClick={backToNewsletterSettings}>
+              <P1 text="上一步" />
+            </Previous>
+            <Next onClick={finishSettings}>
+              <P1 text="完成" />
+            </Next>
           </React.Fragment>
         )}
       </Control>
