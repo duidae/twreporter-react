@@ -5,10 +5,12 @@ import {
   colorBrand,
   colorGrayscale,
 } from '@twreporter/core/lib/constants/color'
+import { P2 } from '@twreporter/react-components/lib/text/paragraph'
 
 const Container = styled.div`
   display: flex;
   flex-direction: ${props => (props.isVertical ? 'column' : 'row')};
+  width: 42px;
 `
 
 const Label = styled.label`
@@ -53,16 +55,17 @@ const Input = styled.input`
   }
 `
 
-export const Position = Object.freeze({
-  Top: 'top',
-  Bottom: 'bottom',
-  Left: 'left',
-  Right: 'right',
+export const POSITION = Object.freeze({
+  top: 'top',
+  bottom: 'bottom',
+  left: 'left',
+  right: 'right',
 })
+
 export const Toggle = ({
   value = false,
   label = ['', ''],
-  labelPosition = Position.Left,
+  labelPosition = POSITION.left,
   theme = '',
   onClick = () => {},
   ...props
@@ -78,18 +81,18 @@ export const Toggle = ({
   return (
     <Container
       isVertical={
-        labelPosition === Position.Top || labelPosition === Position.Bottom
+        labelPosition === POSITION.top || labelPosition === POSITION.bottom
       }
     >
-      {labelPosition === Position.Top || labelPosition === Position.Left ? (
+      {labelPosition === POSITION.top || labelPosition === POSITION.left ? (
         <React.Fragment>
-          {labelStr}
+          <P2 text={labelStr} />
           {toggle}
         </React.Fragment>
       ) : (
         <React.Fragment>
           {toggle}
-          {labelStr}
+          <P2 text={labelStr} />
         </React.Fragment>
       )}
     </Container>
@@ -104,4 +107,4 @@ Toggle.propTypes = {
   onClick: PropTypes.func.isRequired,
 }
 
-export default { Toggle, Position }
+export default { Toggle, POSITION }

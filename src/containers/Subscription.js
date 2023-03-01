@@ -7,8 +7,9 @@ import { LogoHeader } from '@twreporter/react-components/lib/logo'
 import Divider from '@twreporter/react-components/lib/divider'
 import { H4 } from '@twreporter/react-components/lib/text/headline'
 import { P1, P2 } from '@twreporter/react-components/lib/text/paragraph'
+import { WEIGHT } from '@twreporter/react-components/lib/text/constants/font-weight'
 import { colorGrayscale } from '@twreporter/core/lib/constants/color'
-import { Position, Toggle } from './Toggle'
+import { Toggle, POSITION } from './Toggle'
 
 const Step = Object.freeze({ Newsletter: 'newsletter', Category: 'category' })
 
@@ -123,6 +124,7 @@ const OptionContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 342px;
 `
 
 const TitleContainer = styled.div`
@@ -197,14 +199,14 @@ const Subscription = () => {
       return (
         <NewsletterOptionsContainer key={`newsletter-option-${index}`}>
           <OptionContent>
-            <P1 text={option.text} />
+            <P1 text={option.text} weight={WEIGHT.bold} />
             <Label>{option.label}</Label>
             <P2 text={option.desc} />
           </OptionContent>
           <Toggle
             value={newsletterSubscriptions[index]}
             label={['訂閱', '未訂閱']}
-            labelPosition={Position.Top}
+            labelPosition={POSITION.top}
             onClick={index => onClickNewsletterSubscriptions(index)}
           />
         </NewsletterOptionsContainer>
