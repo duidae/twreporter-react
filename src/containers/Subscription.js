@@ -103,16 +103,31 @@ const Control = styled.div`
   margin-top: 24px;
   margin-bottom: 24px;
 `
-const OptionContainer = styled.div`
+const NewsletterOptionsContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 24px;
+  margin-bottom: 24px;
+`
+
+const CategoryOptionsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
 `
 
 const OptionContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+`
+
+const TitleContainer = styled.div`
+  margin-top: 24px;
+  margin-bottom: 24px;
 `
 
 const Title = styled.div``
@@ -174,17 +189,17 @@ const Subscription = () => {
   const renderTitle = () => {
     const title = settings[step].title
     return title ? (
-      <React.Fragment>
+      <TitleContainer>
         <H4 text={title.text} />
         <P1 text={title.desc} />
-      </React.Fragment>
+      </TitleContainer>
     ) : null
   }
 
   const renderNewsletterOptions = () => {
     return settings[Step.Newsletter].options.map((option, index) => {
       return (
-        <OptionContainer key={`newsletter-option-${index}`}>
+        <NewsletterOptionsContainer key={`newsletter-option-${index}`}>
           <OptionContent>
             <Title>{option.text}</Title>
             <Label>{option.label}</Label>
@@ -196,14 +211,14 @@ const Subscription = () => {
             textPosition={Position.Top}
             onClick={index => onClickNewsletterSubscriptions(index)}
           />
-        </OptionContainer>
+        </NewsletterOptionsContainer>
       )
     })
   }
 
   const renderCategoryOptions = () => {
     return (
-      <React.Fragment>
+      <CategoryOptionsContainer>
         {settings[Step.Category].options.map((option, index) => (
           <Checkbox
             key={`category-option-${index}`}
@@ -217,7 +232,7 @@ const Subscription = () => {
           value={false}
           onClick={onClickAllCategorySelections}
         />
-      </React.Fragment>
+      </CategoryOptionsContainer>
     )
   }
 
