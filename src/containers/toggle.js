@@ -2,6 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: ${props => (props.isVertical ? 'column' : 'row')};
+`
+
 const Label = styled.label`
   display: flex;
   align-items: center;
@@ -52,25 +57,45 @@ export const Position = Object.freeze({
 })
 export const Toggle = ({
   value = false,
-  text = ['', ''],
-  textPostition = Position.Left,
+  label = ['', ''],
+  labelPosition = Position.Left,
   theme = '',
   onClick = () => {},
   ...props
 }) => {
-  return (
+  const labelStr = label && label.length >= 2 ? label[value ? 0 : 1] : ''
+  const toggle = (
     <Label>
-      {text && text.length >= 2 ? text[value ? 0 : 1] : ''}
       <Input type="checkbox" onChange={() => {}} />
       <Switch />
     </Label>
+  )
+
+  return (
+    <Container
+      isVertical={
+        labelPosition === Position.Top || labelPosition === Position.Bottom
+      }
+    >
+      {labelPosition === Position.Top || labelPosition === Position.Left ? (
+        <React.Fragment>
+          {labelStr}
+          {toggle}
+        </React.Fragment>
+      ) : (
+        <React.Fragment>
+          {toggle}
+          {labelStr}
+        </React.Fragment>
+      )}
+    </Container>
   )
 }
 
 Toggle.propTypes = {
   value: PropTypes.bool.isRequired,
-  text: PropTypes.arrayOf(PropTypes.string),
-  textPostition: PropTypes.string,
+  label: PropTypes.arrayOf(PropTypes.string),
+  labelPosition: PropTypes.string,
   theme: PropTypes.string,
   onClick: PropTypes.func.isRequired,
 }

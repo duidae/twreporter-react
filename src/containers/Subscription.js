@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import { LogoHeader } from '@twreporter/react-components/lib/logo'
 import Divider from '@twreporter/react-components/lib/divider'
 import { H4 } from '@twreporter/react-components/lib/text/headline'
-import { P1 } from '@twreporter/react-components/lib/text/paragraph'
+import { P1, P2 } from '@twreporter/react-components/lib/text/paragraph'
 import { colorGrayscale } from '@twreporter/core/lib/constants/color'
 import { Position, Toggle } from './Toggle'
 
@@ -130,10 +130,6 @@ const TitleContainer = styled.div`
   margin-bottom: 24px;
 `
 
-const Title = styled.div``
-
-const Desc = styled.div``
-
 const Label = styled.div``
 
 const Checkbox = ({
@@ -201,14 +197,14 @@ const Subscription = () => {
       return (
         <NewsletterOptionsContainer key={`newsletter-option-${index}`}>
           <OptionContent>
-            <Title>{option.text}</Title>
+            <P1 text={option.text} />
             <Label>{option.label}</Label>
-            <Desc>{option.desc}</Desc>
+            <P2 text={option.desc} />
           </OptionContent>
           <Toggle
             value={newsletterSubscriptions[index]}
-            text={['訂閱', '未訂閱']}
-            textPosition={Position.Top}
+            label={['訂閱', '未訂閱']}
+            labelPosition={Position.Top}
             onClick={index => onClickNewsletterSubscriptions(index)}
           />
         </NewsletterOptionsContainer>
