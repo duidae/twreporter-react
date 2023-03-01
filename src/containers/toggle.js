@@ -44,9 +44,16 @@ const Input = styled.input`
   }
 `
 
-const Toggle = ({
+export const Position = Object.freeze({
+  Top: 'top',
+  Bottom: 'bottom',
+  Left: 'left',
+  Right: 'right',
+})
+export const Toggle = ({
   value = false,
   text = ['', ''],
+  textPostition = Position.Left,
   theme = '',
   onClick = () => {},
   ...props
@@ -62,9 +69,10 @@ const Toggle = ({
 
 Toggle.propTypes = {
   value: PropTypes.bool.isRequired,
-  text: PropTypes.array,
+  text: PropTypes.arrayOf(PropTypes.string),
+  textPostition: PropTypes.string,
   theme: PropTypes.string,
   onClick: PropTypes.func.isRequired,
 }
 
-export default Toggle
+export default { Toggle, Position }

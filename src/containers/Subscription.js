@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 import { LogoHeader } from '@twreporter/react-components/lib/logo'
 import Divider from '@twreporter/react-components/lib/divider'
-import Toggle from './Toggle'
+import { Position, Toggle } from './Toggle'
 
 const Step = Object.freeze({ Newsletter: 'newsletter', Category: 'category' })
 
@@ -184,6 +184,7 @@ const Subscription = () => {
           <Toggle
             value={newsletterSubscriptions[index]}
             text={['訂閱', '未訂閱']}
+            textPosition={Position.Top}
             onClick={index => onClickNewsletterSubscriptions(index)}
           />
         </OptionContainer>
