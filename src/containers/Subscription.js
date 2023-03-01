@@ -7,6 +7,7 @@ import Divider from '@twreporter/react-components/lib/divider'
 import { H4 } from '@twreporter/react-components/lib/text/headline'
 import { P1, P2 } from '@twreporter/react-components/lib/text/paragraph'
 import { WEIGHT } from '@twreporter/react-components/lib/text/constants/font-weight'
+import { Arrow } from '@twreporter/react-components/lib/icon'
 import { colorGrayscale } from '@twreporter/core/lib/constants/color'
 
 // TODO: move to react-components
@@ -147,9 +148,15 @@ const TitleContainer = styled.div`
   margin-bottom: 24px;
 `
 
-const Previous = styled.div``
+const Previous = styled.div`
+  display: flex;
+  flex-direction: row;
+`
 
-const Next = styled.div``
+const Next = styled.div`
+  display: flex;
+  flex-direction: row;
+`
 
 const Subscription = () => {
   const [step, setStep] = useState(Step.Newsletter)
@@ -256,15 +263,18 @@ const Subscription = () => {
             <Previous disabled={true} />
             <Next onClick={goToCategorySettings}>
               <P1 text="下一步" />
+              <Arrow direction="right" releaseBranch={'master'} />
             </Next>
           </React.Fragment>
         ) : (
           <React.Fragment>
             <Previous onClick={backToNewsletterSettings}>
+              <Arrow direction="left" releaseBranch={'master'} />
               <P1 text="上一步" />
             </Previous>
             <Next onClick={finishSettings}>
               <P1 text="完成" />
+              <Arrow direction="right" releaseBranch={'master'} />
             </Next>
           </React.Fragment>
         )}
