@@ -9,7 +9,10 @@ import { H4 } from '@twreporter/react-components/lib/text/headline'
 import { P1, P2 } from '@twreporter/react-components/lib/text/paragraph'
 import { WEIGHT } from '@twreporter/react-components/lib/text/constants/font-weight'
 import { colorGrayscale } from '@twreporter/core/lib/constants/color'
+
+// TODO: move to react-components
 import { Toggle, POSITION } from './Toggle'
+import { Badge } from './Badge'
 
 const Step = Object.freeze({ Newsletter: 'newsletter', Category: 'category' })
 
@@ -127,12 +130,15 @@ const OptionContent = styled.div`
   width: 342px;
 `
 
+const OptionTitle = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
 const TitleContainer = styled.div`
   margin-top: 24px;
   margin-bottom: 24px;
 `
-
-const Label = styled.div``
 
 const Checkbox = ({
   key = '',
@@ -199,8 +205,10 @@ const Subscription = () => {
       return (
         <NewsletterOptionsContainer key={`newsletter-option-${index}`}>
           <OptionContent>
-            <P1 text={option.text} weight={WEIGHT.bold} />
-            <Label>{option.label}</Label>
+            <OptionTitle>
+              <P1 text={option.text} weight={WEIGHT.bold} />
+              <Badge text={option.label} style={{ marginLeft: '8px' }} />
+            </OptionTitle>
             <P2 text={option.desc} />
           </OptionContent>
           <Toggle
