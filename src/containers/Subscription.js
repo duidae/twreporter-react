@@ -232,16 +232,16 @@ const Subscription = () => {
           {settings[Step.Category].options.map((option, index) => (
             <Checkbox
               key={`category-option-${index}`}
-              label={option}
               value={categorySelections[index]}
-              onClick={index => onClickCategorySelections(index)}
+              label={option}
+              onChange={() => onClickCategorySelections(index)}
             />
           ))}
         </CategoryOptionsContainer>
         <Checkbox
           label="以上皆是我感興趣的議題"
           value={false}
-          onClick={onClickAllCategorySelections}
+          onChange={onClickAllCategorySelections}
         />
       </CategoryContent>
     )

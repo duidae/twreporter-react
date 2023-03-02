@@ -9,14 +9,14 @@ const Container = styled.div`
 `
 
 export const Checkbox = ({
-  key = '',
-  label = '',
   value = false,
-  onClick = () => {},
+  label = '',
+  onChange = () => {},
+  ...props
 }) => {
   return (
-    <Container key={key}>
-      <input type="checkbox" checked={value} onChange={onClick} />
+    <Container {...props}>
+      <input type="checkbox" checked={value} onChange={onChange} />
       <P1 text={label} />
     </Container>
   )
@@ -24,9 +24,8 @@ export const Checkbox = ({
 
 Checkbox.propTypes = {
   value: PropTypes.bool.isRequired,
-  key: PropTypes.string,
   label: PropTypes.string,
-  onClick: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 }
 
 export default { Checkbox }
