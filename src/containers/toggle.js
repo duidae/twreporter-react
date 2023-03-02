@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import { P2 } from '@twreporter/react-components/lib/text/paragraph'
 import {
   colorBrand,
   colorGrayscale,
 } from '@twreporter/core/lib/constants/color'
-import { P2 } from '@twreporter/react-components/lib/text/paragraph'
 
 const Container = styled.div`
   display: flex;
@@ -67,14 +67,16 @@ export const Toggle = ({
   value = false,
   label = ['', ''],
   labelPosition = POSITION.left,
-  theme = '',
-  onClick = () => {},
+  onChange = () => {},
   ...props
 }) => {
-  const labelStr = label && label.length >= 2 ? label[value ? 0 : 1] : ''
+  const labelStr = label && label.length >= 2 ? label[value ? 1 : 0] : ''
+  const handleChange = e => {
+    onChange && onChange()
+  }
   const toggle = (
-    <Label>
-      <Input type="checkbox" onChange={() => {}} />
+    <Label {...props}>
+      <Input type="checkbox" checked={value} onChange={handleChange} />
       <Switch />
     </Label>
   )
@@ -104,8 +106,7 @@ Toggle.propTypes = {
   value: PropTypes.bool.isRequired,
   label: PropTypes.arrayOf(PropTypes.string),
   labelPosition: PropTypes.string,
-  theme: PropTypes.string,
-  onClick: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 }
 
 export default { Toggle, POSITION }

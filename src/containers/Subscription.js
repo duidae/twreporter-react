@@ -203,6 +203,7 @@ const Subscription = () => {
   }
 
   const renderNewsletterOptions = () => {
+    const toggleLabel = ['未訂閱', '已訂閱']
     return settings[Step.Newsletter].options.map((option, index) => {
       return (
         <NewsletterOptionsContainer key={`newsletter-option-${index}`}>
@@ -215,9 +216,9 @@ const Subscription = () => {
           </OptionContent>
           <Toggle
             value={newsletterSubscriptions[index]}
-            label={['訂閱', '未訂閱']}
+            label={toggleLabel}
             labelPosition={POSITION.top}
-            onClick={index => onClickNewsletterSubscriptions(index)}
+            onChange={() => onClickNewsletterSubscriptions(index)}
           />
         </NewsletterOptionsContainer>
       )
