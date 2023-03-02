@@ -27,10 +27,10 @@ const Switch = styled.div`
   background: ${colorGrayscale.gray600};
   border-radius: 20px;
   padding: 4px;
-  transition: 300ms all;
+  transition: 100ms ease-in-out;
 
   &:before {
-    transition: 300ms all;
+    transition: 100ms ease-in-out;
     content: '';
     position: absolute;
     width: 16px;
