@@ -175,6 +175,7 @@ const Subscription = () => {
   const [categorySelections, setCategorySelections] = useState(
     settings.category.options.map(option => false)
   )
+  const [categoryIsSelectAll, setCategoryIsSelectAll] = useState(false)
 
   const onClickNewsletterSubscriptions = index => {
     const subscriptions = [...newsletterSubscriptions]
@@ -189,7 +190,12 @@ const Subscription = () => {
   }
 
   const onClickAllCategorySelections = () => {
-    // TODO
+    // TODO: fix logic
+    const isSelectAll = !categoryIsSelectAll
+    setCategoryIsSelectAll(isSelectAll)
+    if (isSelectAll) {
+      setCategorySelections(settings.category.options.map(option => true))
+    }
   }
 
   const renderTitle = () => {
@@ -239,8 +245,8 @@ const Subscription = () => {
           ))}
         </CategoryOptionsContainer>
         <Checkbox
+          value={categoryIsSelectAll}
           label="以上皆是我感興趣的議題"
-          value={false}
           onChange={onClickAllCategorySelections}
         />
       </CategoryContent>
