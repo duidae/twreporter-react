@@ -55,6 +55,7 @@ const Input = styled.input`
   }
 `
 
+// TODO: enum coding style?
 export const POSITION = Object.freeze({
   top: 'top',
   bottom: 'bottom',

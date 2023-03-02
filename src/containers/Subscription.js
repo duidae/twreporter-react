@@ -15,6 +15,7 @@ import { Toggle, POSITION } from './Toggle'
 import { Badge } from './Badge'
 import { Checkbox } from './Checkbox'
 
+// TODO: enum coding style?
 const Step = Object.freeze({ Newsletter: 'newsletter', Category: 'category' })
 
 const settings = {
@@ -245,12 +246,6 @@ const Subscription = () => {
     )
   }
 
-  const renderOptions = () => {
-    return step === Step.Newsletter
-      ? renderNewsletterOptions()
-      : renderCategoryOptions()
-  }
-
   const goToCategorySettings = () => {
     setStep(Step.Category)
   }
@@ -261,8 +256,10 @@ const Subscription = () => {
 
   const finishSettings = () => {
     // TODO: what to do?
+    console.log(newsletterSubscriptions, categorySelections)
   }
 
+  // TODO: handle releaseBranch prop
   const renderPageControl = () => {
     return (
       <Control>
@@ -299,7 +296,9 @@ const Subscription = () => {
         <Content>
           {renderTitle()}
           <Divider />
-          {renderOptions()}
+          {step === Step.Newsletter
+            ? renderNewsletterOptions()
+            : renderCategoryOptions()}
           <Divider />
           {renderPageControl()}
         </Content>
