@@ -204,7 +204,10 @@ const Subscription = () => {
     return title ? (
       <TitleContainer>
         <H4 text={title.text} style={{ color: colorGrayscale.gray800 }} />
-        <P1 text={title.desc} style={{ color: colorGrayscale.gray600 }} />
+        <P1
+          text={title.desc}
+          style={{ paddingTop: '8px', color: colorGrayscale.gray600 }}
+        />
       </TitleContainer>
     ) : null
   }
