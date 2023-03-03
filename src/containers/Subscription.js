@@ -217,7 +217,10 @@ const Subscription = () => {
           <OptionContent>
             <OptionTitle>
               <P1 text={option.text} weight={WEIGHT.bold} />
-              <Badge text={option.label} style={{ marginLeft: '8px' }} />
+              <Badge
+                text={option.label}
+                style={{ color: colorBrand.heavy, marginLeft: '8px' }}
+              />
             </OptionTitle>
             <P2 text={option.desc} />
           </OptionContent>
