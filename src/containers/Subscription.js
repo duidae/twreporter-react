@@ -203,7 +203,7 @@ const Subscription = () => {
     const title = settings[step].title
     return title ? (
       <TitleContainer>
-        <H4 text={title.text} />
+        <H4 text={title.text} style={{ color: colorGrayscale.gray800 }} />
         <P1 text={title.desc} style={{ color: colorGrayscale.gray600 }} />
       </TitleContainer>
     ) : null
