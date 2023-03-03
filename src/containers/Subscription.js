@@ -204,7 +204,7 @@ const Subscription = () => {
     return title ? (
       <TitleContainer>
         <H4 text={title.text} />
-        <P1 text={title.desc} />
+        <P1 text={title.desc} style={{ color: colorGrayscale.gray600 }} />
       </TitleContainer>
     ) : null
   }
@@ -216,13 +216,17 @@ const Subscription = () => {
         <NewsletterOptionsContainer key={`newsletter-option-${index}`}>
           <OptionContent>
             <OptionTitle>
-              <P1 text={option.text} weight={WEIGHT.bold} />
+              <P1
+                text={option.text}
+                weight={WEIGHT.bold}
+                style={{ color: colorGrayscale.gray800 }}
+              />
               <Badge
                 text={option.label}
                 style={{ color: colorBrand.heavy, marginLeft: '8px' }}
               />
             </OptionTitle>
-            <P2 text={option.desc} />
+            <P2 text={option.desc} style={{ color: colorGrayscale.gray600 }} />
           </OptionContent>
           <ToggleButton
             value={newsletterSubscriptions[index]}
