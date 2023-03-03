@@ -158,6 +158,9 @@ const OptionTitle = styled.div`
 `
 
 const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 24px;
   margin-bottom: 24px;
 `
