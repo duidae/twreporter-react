@@ -2,7 +2,10 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import mq from '../utils/media-query'
 
-import { colorGrayscale } from '@twreporter/core/lib/constants/color'
+import {
+  colorBrand,
+  colorGrayscale,
+} from '@twreporter/core/lib/constants/color'
 import { LogoHeader } from '@twreporter/react-components/lib/logo'
 import Divider from '@twreporter/react-components/lib/divider'
 import { H4 } from '@twreporter/react-components/lib/text/headline'
@@ -272,19 +275,43 @@ const Subscription = () => {
           <React.Fragment>
             <StepContainer disabled={true} />
             <StepContainer onClick={goToCategorySettings}>
-              <P1 text="下一步" />
-              <Arrow direction="right" releaseBranch={'master'} />
+              <P1
+                text="下一步"
+                weight={WEIGHT.bold}
+                style={{ color: colorBrand.heavy }}
+              />
+              <Arrow
+                direction="right"
+                releaseBranch={'master'}
+                style={{ backgroundColor: colorBrand.heavy }}
+              />
             </StepContainer>
           </React.Fragment>
         ) : (
           <React.Fragment>
             <StepContainer onClick={backToNewsletterSettings}>
-              <Arrow direction="left" releaseBranch={'master'} />
-              <P1 text="上一步" />
+              <Arrow
+                direction="left"
+                releaseBranch={'master'}
+                style={{ backgroundColor: colorBrand.heavy }}
+              />
+              <P1
+                text="上一步"
+                weight={WEIGHT.bold}
+                style={{ color: colorBrand.heavy }}
+              />
             </StepContainer>
             <StepContainer onClick={finishSettings}>
-              <P1 text="完成" />
-              <Arrow direction="right" releaseBranch={'master'} />
+              <P1
+                text="完成"
+                weight={WEIGHT.bold}
+                style={{ color: colorBrand.heavy }}
+              />
+              <Arrow
+                direction="right"
+                releaseBranch={'master'}
+                style={{ backgroundColor: colorBrand.heavy }}
+              />
             </StepContainer>
           </React.Fragment>
         )}
