@@ -101,10 +101,11 @@ const Body = styled.div`
   `}
 `
 
+// TODO: check mobile width & scroll
 const Content = styled.div`
-  max-width: 432px;
+  width: 432px;
   ${mq.mobileOnly`
-    max-width: 342px;
+    width: 342px;
   `}
   display: flex;
   flex-direction: column;
@@ -115,32 +116,18 @@ const Content = styled.div`
   border-radius: 8px;
 `
 
-const Control = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 24px;
-  margin-bottom: 24px;
-`
-const NewsletterOptionsContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 24px;
-`
-const CategoryContent = styled.div`
+const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: 24px;
   margin-bottom: 24px;
 `
 
-const CategoryOptionsContainer = styled.div`
+const NewsletterOptionsContainer = styled.div`
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 24px;
+  justify-content: space-between;
   margin-bottom: 24px;
 `
 
@@ -157,10 +144,26 @@ const OptionTitle = styled.div`
   margin-bottom: 4px;
 `
 
-const TitleContainer = styled.div`
+const CategoryContent = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+`
+
+const CategoryOptionsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+`
+
+const Control = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin-top: 24px;
   margin-bottom: 24px;
 `
