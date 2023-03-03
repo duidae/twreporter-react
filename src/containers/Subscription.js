@@ -2,24 +2,22 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import mq from '../utils/media-query'
 
+import { colorGrayscale } from '@twreporter/core/lib/constants/color'
 import { LogoHeader } from '@twreporter/react-components/lib/logo'
 import Divider from '@twreporter/react-components/lib/divider'
 import { H4 } from '@twreporter/react-components/lib/text/headline'
 import { P1, P2 } from '@twreporter/react-components/lib/text/paragraph'
 import { WEIGHT } from '@twreporter/react-components/lib/text/constants/font-weight'
 import { Arrow } from '@twreporter/react-components/lib/icon'
-import { colorGrayscale } from '@twreporter/core/lib/constants/color'
+import { Badge } from '@twreporter/react-components/lib/badge'
+import { Checkbox } from '@twreporter/react-components/lib/checkbox'
+import { ToggleButton } from '@twreporter/react-components/lib/button'
+import { Position } from '@twreporter/react-components/lib/button/constants'
 
-// TODO: move to react-components
-import { Toggle, POSITION } from './Toggle'
-import { Badge } from './Badge'
-import { Checkbox } from './Checkbox'
-
-// TODO: enum coding style?
-const Step = Object.freeze({ Newsletter: 'newsletter', Category: 'category' })
+const Step = Object.freeze({ NEWSLETTER: 'newsletter', CATEGORY: 'category' })
 
 const settings = {
-  [Step.Newsletter]: {
+  [Step.NEWSLETTER]: {
     title: { text: '會員電子報', desc: '訂閱電子報，把《報導者》收進信箱' },
     options: [
       {
@@ -48,7 +46,7 @@ const settings = {
       },
     ],
   },
-  [Step.Category]: {
+  [Step.CATEGORY]: {
     title: {
       text: '你感興趣的議題',
       desc: '請勾選你感興趣的議題，讓我們更了解你',
@@ -168,7 +166,7 @@ const StepContainer = styled.div`
 `
 
 const Subscription = () => {
-  const [step, setStep] = useState(Step.Newsletter)
+  const [step, setStep] = useState(Step.NEWSLETTER)
   const [newsletterSubscriptions, setNewsletterSubscriptions] = useState(
     settings.newsletter.options.map(option => false)
   )
@@ -210,7 +208,7 @@ const Subscription = () => {
 
   const renderNewsletterOptions = () => {
     const toggleLabel = ['未訂閱', '已訂閱']
-    return settings[Step.Newsletter].options.map((option, index) => {
+    return settings[Step.NEWSLETTER].options.map((option, index) => {
       return (
         <NewsletterOptionsContainer key={`newsletter-option-${index}`}>
           <OptionContent>
@@ -220,10 +218,10 @@ const Subscription = () => {
             </OptionTitle>
             <P2 text={option.desc} />
           </OptionContent>
-          <Toggle
+          <ToggleButton
             value={newsletterSubscriptions[index]}
             label={toggleLabel}
-            labelPosition={POSITION.top}
+            labelPosition={Position.TOP}
             onChange={() => onClickNewsletterSubscriptions(index)}
           />
         </NewsletterOptionsContainer>
@@ -235,7 +233,7 @@ const Subscription = () => {
     return (
       <CategoryContent>
         <CategoryOptionsContainer>
-          {settings[Step.Category].options.map((option, index) => (
+          {settings[Step.CATEGORY].options.map((option, index) => (
             <Checkbox
               key={`category-option-${index}`}
               value={categorySelections[index]}
@@ -254,11 +252,11 @@ const Subscription = () => {
   }
 
   const goToCategorySettings = () => {
-    setStep(Step.Category)
+    setStep(Step.CATEGORY)
   }
 
   const backToNewsletterSettings = () => {
-    setStep(Step.Newsletter)
+    setStep(Step.NEWSLETTER)
   }
 
   const finishSettings = () => {
@@ -270,7 +268,7 @@ const Subscription = () => {
   const renderPageControl = () => {
     return (
       <Control>
-        {step === Step.Newsletter ? (
+        {step === Step.NEWSLETTER ? (
           <React.Fragment>
             <StepContainer disabled={true} />
             <StepContainer onClick={goToCategorySettings}>
@@ -303,7 +301,7 @@ const Subscription = () => {
         <Content>
           {renderTitle()}
           <Divider />
-          {step === Step.Newsletter
+          {step === Step.NEWSLETTER
             ? renderNewsletterOptions()
             : renderCategoryOptions()}
           <Divider />
