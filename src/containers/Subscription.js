@@ -104,8 +104,8 @@ const Body = styled.div`
 const Content = styled.div`
   max-width: 432px;
   ${mq.mobileOnly`
-max-width: 342px;
-`}
+    max-width: 342px;
+  `}
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -126,7 +126,6 @@ const NewsletterOptionsContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 24px;
   margin-bottom: 24px;
 `
 const CategoryContent = styled.div`
@@ -155,6 +154,7 @@ const OptionContent = styled.div`
 const OptionTitle = styled.div`
   display: flex;
   flex-direction: row;
+  margin-bottom: 4px;
 `
 
 const TitleContainer = styled.div`
@@ -340,11 +340,11 @@ const Subscription = () => {
       <Body>
         <Content>
           {renderTitle()}
-          <Divider />
+          <Divider style={{ marginBottom: '40px' }} />
           {step === Step.NEWSLETTER
             ? renderNewsletterOptions()
             : renderCategoryOptions()}
-          <Divider />
+          <Divider style={{ marginTop: '16px' }} />
           {renderPageControl()}
         </Content>
       </Body>
