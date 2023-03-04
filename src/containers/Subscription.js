@@ -15,7 +15,6 @@ import { Arrow } from '@twreporter/react-components/lib/icon'
 import { Badge } from '@twreporter/react-components/lib/badge'
 import { Checkbox } from '@twreporter/react-components/lib/checkbox'
 import { ToggleButton } from '@twreporter/react-components/lib/button'
-import { Position } from '@twreporter/react-components/lib/button/constants'
 
 const Step = Object.freeze({ NEWSLETTER: 'newsletter', CATEGORY: 'category' })
 
@@ -240,7 +239,6 @@ const Subscription = () => {
           <ToggleButton
             value={newsletterSubscriptions[index]}
             label={toggleLabel}
-            labelPosition={Position.TOP}
             onChange={() => onClickNewsletterSubscriptions(index)}
           />
         </NewsletterOptionsContainer>
