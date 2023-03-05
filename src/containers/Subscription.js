@@ -6,7 +6,7 @@ import {
   colorBrand,
   colorGrayscale,
 } from '@twreporter/core/lib/constants/color'
-import { LogoHeader } from '@twreporter/react-components/lib/logo'
+import { SimpleHeader } from '@twreporter/react-components/lib/simple-header'
 import Divider from '@twreporter/react-components/lib/divider'
 import { H4 } from '@twreporter/react-components/lib/text/headline'
 import { P1, P2 } from '@twreporter/react-components/lib/text/paragraph'
@@ -74,29 +74,23 @@ const Container = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-
-  ${mq.tabletAndAbove`
-    justify-content: center;
-  `}
-`
-
-const Header = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 16px 24px;
 `
 
 const Body = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-top: 24px;
-  padding-bottom: 24px;
+
+  ${mq.tabletAndAbove`
+    @media (min-height: 709px) {
+        padding-top: 50px;
+    }
+    padding-top: 24px;
+    padding-bottom: 24px;
+  `}
 
   ${mq.mobileOnly`
-    padding-left: 24px;
-    padding-right: 24px;
+    padding: 24px;
   `}
 `
 
@@ -335,9 +329,7 @@ const Subscription = () => {
 
   return (
     <Container>
-      <Header>
-        <LogoHeader />
-      </Header>
+      <SimpleHeader />
       <Body>
         <Content>
           {renderTitle()}
