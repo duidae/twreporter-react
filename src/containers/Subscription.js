@@ -80,6 +80,7 @@ const Body = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  background-color: ${colorGrayscale.gray100};
 
   ${mq.tabletAndAbove`
     @media (min-height: 709px) {
