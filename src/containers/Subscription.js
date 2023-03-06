@@ -84,8 +84,8 @@ const Body = styled.div`
   background-color: ${colorGrayscale.gray100};
 
   ${mq.tabletAndAbove`
-    @media (min-height: 709px) {
-        padding-top: calc(50vh - 310px - 64px);
+    @media (min-height: 796px) {
+      padding-top: calc(50vh - 310px - 64px);
     }
     padding-top: 24px;
     padding-bottom: 24px;
