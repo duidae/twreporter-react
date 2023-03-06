@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import mq from '../utils/media-query'
 
+// @twreporter
 import {
   colorBrand,
   colorGrayscale,
@@ -191,7 +192,6 @@ const Subscription = () => {
   }
 
   const onClickAllCategorySelections = () => {
-    // TODO: fix logic
     const isSelectAll = !categoryIsSelectAll
     setCategoryIsSelectAll(isSelectAll)
     if (isSelectAll) {
@@ -264,7 +264,7 @@ const Subscription = () => {
   }
 
   const goToCategorySettings = () => {
-    setStep(Step.CATEGORY)
+    // TODO: setStep(Step.CATEGORY)
   }
 
   const backToNewsletterSettings = () => {
@@ -272,7 +272,7 @@ const Subscription = () => {
   }
 
   const finishSettings = () => {
-    // TODO: what to do?
+    // TODO: call api for subscription
     console.log(newsletterSubscriptions, categorySelections)
   }
 
