@@ -84,7 +84,7 @@ const Body = styled.div`
 
   ${mq.tabletAndAbove`
     @media (min-height: 709px) {
-        padding-top: 50px;
+        padding-top: calc(50vh - 310px - 64px);
     }
     padding-top: 24px;
     padding-bottom: 24px;
