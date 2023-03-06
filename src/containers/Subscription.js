@@ -96,7 +96,6 @@ const Body = styled.div`
   `}
 `
 
-// TODO: check mobile width & scroll
 const Content = styled.div`
   width: 432px;
   ${mq.mobileOnly`
