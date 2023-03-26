@@ -79,10 +79,18 @@ class LeadingImage extends React.PureComponent {
       this.onLoad()
     }
 
-    const p5Script = document.createElement('script')
-    p5Script.text = `new p5($=>{particles1=[],particles2=[],noiseScale=.01/1.5,n=.1,a=.01,a2=.01;let o=0,r,e;function t($){return $.x<r&&$.y<e&&$.x>0&&$.y>0}$.setup=function(){let o=$.select("#c1");for(r=o?o.width:600,e=o?o.height:600,$.createCanvas(r,e),$.background(255),i=0;i<2e3;i++)particles1.push($.createVector(0,$.random(-100,e/2))),particles2.push($.createVector(0,$.random(e/2,e+100)))},$.draw=function(){for(i=0;i<500;i++)p1=particles1[i],p2=particles2[i],$.strokeWeight($.map($.sin(a+a2),-1,1,0,$.random(3,$.random(5,$.random(10,15))))),$.stroke(0,0,$.random(0,255),$.map($.sin(a),-1,1,10,200)),$.point(p1.x,p1.y),o=$.random($.random(100,250),255),$.stroke(o,o-50,0,$.map($.sin(a),-1,1,10,200)),$.point(p2.x,p2.y),n=$.noise(p1.x*noiseScale,p1.y*noiseScale,$.frameCount/noiseScale),a=$.TAU*n,n2=$.noise(p2.x*noiseScale,p2.y*noiseScale,$.frameCount/noiseScale),a2=$.TAU*n2,p1.x+=-($.cos(a)-$.random(-.5,.5)),p1.y+=$.sin(a),p2.x+=-($.cos(a2)-$.random(-.5,.5)),p2.y+=$.sin(a2),t(p1)||(p1.x=0,p1.y=$.random(-100,e/2)),t(p2)||(p2.x=0,p2.y=$.random(e/2,e+100))}},"c1");`
-    document.body.appendChild(p5Script)
     // TODO: demount or clean of new p5 object?
+    if (
+      this.props.imgSet.desktop.url.includes(
+        '20220413171642-d84c8ec605bb59c1c940c6cd9223224f'
+      )
+    ) {
+      const p5Script = document.createElement('script')
+      p5Script.text = `new p5($=>{particles1=[],particles2=[],noiseScale=.01/1.5,n=.1,a=.01,a2=.01;let o=0,r,e;function t($){return $.x<r&&$.y<e&&$.x>0&&$.y>0}$.setup=function(){let o=$.select("#c1");for(r=o?o.width:600,e=o?o.height:600,$.createCanvas(r,e),$.background(255),i=0;i<2e3;i++)particles1.push($.createVector(0,$.random(-100,e/2))),particles2.push($.createVector(0,$.random(e/2,e+100)))},$.draw=function(){for(i=0;i<500;i++)p1=particles1[i],p2=particles2[i],$.strokeWeight($.map($.sin(a+a2),-1,1,0,$.random(3,$.random(5,$.random(10,15))))),$.stroke(0,0,$.random(0,255),$.map($.sin(a),-1,1,10,200)),$.point(p1.x,p1.y),o=$.random($.random(100,250),255),$.stroke(o,o-50,0,$.map($.sin(a),-1,1,10,200)),$.point(p2.x,p2.y),n=$.noise(p1.x*noiseScale,p1.y*noiseScale,$.frameCount/noiseScale),a=$.TAU*n,n2=$.noise(p2.x*noiseScale,p2.y*noiseScale,$.frameCount/noiseScale),a2=$.TAU*n2,p1.x+=-($.cos(a)-$.random(-.5,.5)),p1.y+=$.sin(a),p2.x+=-($.cos(a2)-$.random(-.5,.5)),p2.y+=$.sin(a2),t(p1)||(p1.x=0,p1.y=$.random(-100,e/2)),t(p2)||(p2.x=0,p2.y=$.random(e/2,e+100))}},"c1");`
+      document.body.appendChild(p5Script)
+    } else if (this.props.imgSet.desktop.url.includes('G3tIY1P')) {
+    } else if (this.props.imgSet.desktop.url.includes('yjP3VGu')) {
+    }
   }
 
   componentWillUnmount() {
@@ -117,6 +125,7 @@ class LeadingImage extends React.PureComponent {
   render() {
     const { isLoaded, isObjectFit, toShowPlaceholder } = this.state
     const { alt, imgSet, portraitImgSet, viewportHeight } = this.props
+    console.log(this.props)
 
     const imgJSX = isObjectFit ? (
       <StyledPicture>
