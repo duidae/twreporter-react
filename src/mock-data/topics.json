@@ -940,324 +940,11 @@
     "og_title": "【兒童新聞專題】戰爭與和平──烏克蘭、俄羅斯和台灣的我們"
   },
   {
-    "id": "aaasdfsadfadsf",
-    "slug": "russian-invasion-of-ukraine-2022-kid",
-    "title": "BLACKPINK七月再來台「加開場」？2消息管道「可信度引粉絲暴動」 地點也先被公開",
-    "short_title": "兒童新聞專題：戰爭與和平",
-    "published_date": "2022-06-23T16:00:00Z",
-    "og_description": "俄羅斯入侵烏克蘭的系列報導，是《報導者》推出的第一個兒童新聞。戰爭是最殘酷與複雜的新聞事件，卻也是最需要去思考及了解的議題。我們選擇從這個大事件和人類難題開始，與孩子展開對話。",
-    "og_image": {
-      "filetype": "image/jpeg",
-      "resized_targets": {
-        "mobile": {
-          "height": 450,
-          "width": 800,
-          "url": "https://i.imgur.com/yjP3VGu.jpg"
-        },
-        "tiny": {
-          "height": 84,
-          "width": 150,
-          "url": "https://i.imgur.com/yjP3VGu.jpg"
-        },
-        "desktop": {
-          "height": 900,
-          "width": 1600,
-          "url": "https://i.imgur.com/yjP3VGu.jpg"
-        },
-        "tablet": {
-          "height": 675,
-          "width": 1200,
-          "url": "https://i.imgur.com/yjP3VGu.jpg"
-        },
-        "w400": {
-          "height": 225,
-          "width": 400,
-          "url": "https://i.imgur.com/yjP3VGu.jpg"
-        }
-      },
-      "id": "625694cc96c54f0600c96862",
-      "description": "分眾版_專題頁_戰爭與和平主圖"
-    },
-    "leading_image": {
-      "filetype": "image/jpeg",
-      "resized_targets": {
-        "mobile": {
-          "height": 450,
-          "width": 800,
-          "url": "https://i.imgur.com/yjP3VGu.jpg"
-        },
-        "tiny": {
-          "height": 84,
-          "width": 150,
-          "url": "https://i.imgur.com/yjP3VGu.jpg"
-        },
-        "desktop": {
-          "height": 900,
-          "width": 1600,
-          "url": "https://i.imgur.com/yjP3VGu.jpg"
-        },
-        "tablet": {
-          "height": 675,
-          "width": 1200,
-          "url": "https://i.imgur.com/yjP3VGu.jpg"
-        },
-        "w400": {
-          "height": 225,
-          "width": 400,
-          "url": "https://i.imgur.com/yjP3VGu.jpg"
-        }
-      },
-      "id": "625694cc96c54f0600c96862",
-      "description": "分眾版_專題頁_戰爭與和平主圖"
-    },
-    "relateds": [
-      "62502a05e538880600e2f1a3",
-      "624f90b9e538880600e2f18d",
-      "6254f0d896c54f0600c96839",
-      "624fa5f3e538880600e2f196",
-      "6253f60996c54f0600c96827",
-      "624fcbade538880600e2f198",
-      "624fde69e538880600e2f19d",
-      "624681b4e538880600e2f0f0",
-      "62399c7ce538880600e2f002",
-      "62382590e538880600e2eff2",
-      "628b61bc42507f0600e69877",
-      "6284a5b942507f0600e6981a",
-      "62a053c40117d306005b8646"
-    ],
-    "full": true,
-    "relateds_background": "#f8efba",
-    "relateds_format": "in-row",
-    "title_position": "center",
-    "headline": "兒童新聞專題",
-    "subtitle": "",
-    "description": {
-      "api_data": [
-        {
-          "alignment": "center",
-          "content": [
-            "《報導者》今年滿6歲了，這是上小學的年紀，我們也決定，要開始和10到15歲的中小學生對話，今年開始，我們會推出《報導者》的兒童新聞。"
-          ],
-          "id": "233eq",
-          "styles": {},
-          "type": "unstyled"
-        },
-        {
-          "alignment": "center",
-          "content": [
-            "我們認為，向孩子解釋重要的新聞、嚴肅的議題，讓孩子透過這些訊息，理解他人、了解世界、做出文化價值的判斷、同時學習表達自己，是民主社會很重要的事，也是身為非營利媒體的我們，重要的責任。"
-          ],
-          "id": "6bhou",
-          "styles": {},
-          "type": "unstyled"
-        },
-        {
-          "alignment": "center",
-          "content": [
-            "我們期待，透過兒童新聞，讓孩子和大人一起討論有意義的新聞，並且雙向溝通，彼此獲得學習和安慰。孩子不只是訊息接收者、也應該是意見參與者。我們不只站在「傳播」的角色，也要站在「聆聽」的位置。"
-          ],
-          "id": "aocb0",
-          "styles": {},
-          "type": "unstyled"
-        },
-        {
-          "alignment": "center",
-          "content": [
-            "俄羅斯入侵烏克蘭的系列報導，是《報導者》推出的第一個兒童新聞。在這個世界巨變的重大時刻，沒有人是局外人，我們的採訪團隊也在第一時間挺進烏克蘭的邊境，推出即時與深度的\u003ca target=\"_blank\" href=\"https://www.twreporter.org/topics/russian-invasion-of-ukraine-2022\"\u003e《俄羅斯入侵烏克蘭全紀錄》\u003c/a\u003e報導，而特別製作給孩子看的專題中，我們分成幾個方向來和孩子們溝通，關於「戰爭」這件事："
-          ],
-          "id": "8db2i",
-          "styles": {},
-          "type": "unstyled"
-        },
-        {
-          "alignment": "center",
-          "content": [
-            "\u003cstrong\u003e一、新聞事實和現場\u003c/strong\u003e"
-          ],
-          "id": "7vkcc",
-          "styles": {},
-          "type": "unstyled"
-        },
-        {
-          "alignment": "center",
-          "content": [
-            "首先，我們用6張圖看\u003ca target=\"_blank\" href=\"https://www.twreporter.org/a/russian-invasion-of-ukraine-2022-kid-six-keywords\"\u003e6個關鍵字\u003c/a\u003e，分析整理出新聞的背景資料；也用\u003ca target=\"_blank\" href=\"https://www.twreporter.org/a/russian-invasion-of-ukraine-2022-kid-photos\"\u003e10張照片\u003c/a\u003e帶孩子走進新聞現場，《報導者》攝影記者楊子磊在戰爭邊境，記錄下殘酷戰火中溫暖的人性。此外，政大俄羅斯研究所副教授魏百谷撰寫\u003ca target=\"_blank\" href=\"https://www.twreporter.org/a/russian-invasion-of-ukraine-2022-kid-my-ukrainian-friend\"\u003e他與烏克蘭朋友的友誼\u003c/a\u003e，他們對於彼此國家的期許和祝福，以及一個戰爭後的約定。"
-          ],
-          "id": "728vd",
-          "styles": {},
-          "type": "unstyled"
-        },
-        {
-          "alignment": "center",
-          "content": [
-            "\u003cstrong\u003e二、與孩子雙向互動\u003c/strong\u003e"
-          ],
-          "id": "1j68o",
-          "styles": {},
-          "type": "unstyled"
-        },
-        {
-          "alignment": "center",
-          "content": [
-            "我們與北中南東11個學校班級合作，搜集了220位2到9年級孩子的提問，統合整理出\u003ca target=\"_blank\" href=\"https://www.twreporter.org/a/russian-invasion-of-ukraine-2022-kid-frequently-asked-questions\"\u003e20個台灣孩子關鍵問題\u003c/a\u003e，為他們的提問找到專家回答；也設計\u003ca target=\"_blank\" href=\"https://www.twreporter.org/a/russian-invasion-of-ukraine-2022-kid-quiz\"\u003e新聞測驗\u003c/a\u003e，強化新聞知識的回饋感。"
-          ],
-          "id": "mav3",
-          "styles": {},
-          "type": "unstyled"
-        },
-        {
-          "alignment": "center",
-          "content": [
-            "\u003cstrong\u003e三、媒體素養的建構\u003c/strong\u003e"
-          ],
-          "id": "a4bvo",
-          "styles": {},
-          "type": "unstyled"
-        },
-        {
-          "alignment": "center",
-          "content": [
-            "我們以\u003ca target=\"_blank\" href=\"https://www.twreporter.org/a/russian-invasion-of-ukraine-2022-graphic-story\"\u003e漫畫\u003c/a\u003e形式，呈現戰爭下跨國報導的媒體與記者的考驗與挑戰，讓孩子從了解新聞工作的本質，建立對媒體訊息產製的理解；《報導者》國際新聞記者楊智強的特寫報導，則介紹過去很少被看見的隱形新聞工作者\u003ca target=\"_blank\" href=\"https://www.twreporter.org/a/russian-invasion-of-ukraine-2022-kid-fixer\"\u003eFixer\u003c/a\u003e的角色。"
-          ],
-          "id": "7sge7",
-          "styles": {},
-          "type": "unstyled"
-        },
-        {
-          "alignment": "center",
-          "content": [
-            "\u003cstrong\u003e四、提升人文的思考\u003c/strong\u003e"
-          ],
-          "id": "9gef1",
-          "styles": {},
-          "type": "unstyled"
-        },
-        {
-          "alignment": "center",
-          "content": [
-            "除了真實現場和歷史知識外，戰爭發生下更需要思考的是「如何取得和平？」這需要的是打開人文的思考，我們邀請\u003ca target=\"_blank\" href=\"https://www.twreporter.org/a/russian-invasion-of-ukraine-2022-kid-reading-materials\"\u003e14位各行各業的名人\u003c/a\u003e，向孩子推薦一本影響他們人生的戰爭文學，由不同人的視野，理解對於戰爭的各種想像和領悟。"
-          ],
-          "id": "bk738",
-          "styles": {},
-          "type": "unstyled"
-        },
-        {
-          "alignment": "center",
-          "content": [
-            "我們也請關注東歐\u003ca target=\"_blank\" href=\"https://www.twreporter.org/a/russian-invasion-of-ukraine-2022-kid-russian-and-ukrainian-picture-books\"\u003e繪本\u003c/a\u003e的兒童文學家蘇懿禎，介紹5本俄羅斯和烏克蘭繪本，由民間童話故事認識這些國度。"
-          ],
-          "id": "c2l4",
-          "styles": {},
-          "type": "unstyled"
-        },
-        {
-          "alignment": "center",
-          "content": [
-            "在版面呈現上，你也會發現，兒童專題有大量的圖像配圖，我們的設計師黃禹禛、鄭涵文，以烏克蘭國旗的藍黃色系，設計出一系列有故事性的插畫。同時，我們也更強化專業核實，每一篇文章後「誰幫我們完成了這篇文章」，詳細陳列出每一位工作者，讓孩子對新聞工作產製有更具體的想像；同時在涉及專業知識的文章上，除了我們內部核稿系統外，也再多一道審閱專家把關。"
-          ],
-          "id": "ej56u",
-          "styles": {},
-          "type": "unstyled"
-        },
-        {
-          "alignment": "center",
-          "content": [
-            "戰爭是最殘酷與複雜的新聞事件，卻也是最需要去思考及了解的議題。我們選擇從這個大事件和人類難題開始，與孩子展開對話。"
-          ],
-          "id": "6csh3",
-          "styles": {},
-          "type": "unstyled"
-        },
-        {
-          "alignment": "center",
-          "content": [
-            "\u003cem\u003e※更多深度兒少新聞專題，請至\u003ca target=\"_blank\" href=\"https://kids.twreporter.org/\"\u003e《少年報導者》官網\u003c/a\u003e。\u003c/em\u003e"
-          ],
-          "id": "6hvu4",
-          "styles": {},
-          "type": "unstyled"
-        }
-      ]
-    },
-    "team_description": {
-      "api_data": [
-        {
-          "alignment": "center",
-          "content": ["監製｜楊惠君"],
-          "id": "bhmr4",
-          "styles": {},
-          "type": "unstyled"
-        },
-        {
-          "alignment": "center",
-          "content": [
-            "文字｜楊惠君、陳韻如、楊智強、楊子磊、魏百谷、蘇懿禎、林蔚昀"
-          ],
-          "id": "bovi1",
-          "styles": {},
-          "type": "unstyled"
-        },
-        {
-          "alignment": "center",
-          "content": ["譯者｜王立柔"],
-          "id": "3t98q",
-          "styles": {},
-          "type": "unstyled"
-        },
-        {
-          "alignment": "center",
-          "content": ["封面插畫｜鄭涵文"],
-          "id": "8su55",
-          "styles": {},
-          "type": "unstyled"
-        },
-        {
-          "alignment": "center",
-          "content": ["攝影｜楊子磊、梁佳欣"],
-          "id": "53p6s",
-          "styles": {},
-          "type": "unstyled"
-        },
-        {
-          "alignment": "center",
-          "content": ["插畫與設計｜鄭涵文、黃禹禛"],
-          "id": "16a3m",
-          "styles": {},
-          "type": "unstyled"
-        },
-        {
-          "alignment": "center",
-          "content": ["編輯｜陳韻如"],
-          "id": "3l9am",
-          "styles": {},
-          "type": "unstyled"
-        },
-        {
-          "alignment": "center",
-          "content": ["編輯顧問｜陳明蕾、黃哲斌、黃惠鈴"],
-          "id": "cba7h",
-          "styles": {},
-          "type": "unstyled"
-        },
-        {
-          "alignment": "center",
-          "content": [
-            "特別感謝｜前國語實小林玫伶校長、台東縣桃源國小KIST理念公辦民營學校林慧萍校長、台北市東湖國中林莉婷老師、金門縣金鼎國小黃議霆老師、高雄市福山國小王琇琴老師、台北市幸安國小李婕瑜老師、台北巿士東國小郭麗如老師、桃園縣中壢國小賴明欣老師、苗栗縣后庄國小陳韻因老師、屏東縣武潭國小朱鵷瑾老師"
-          ],
-          "id": "30k9c",
-          "styles": {},
-          "type": "unstyled"
-        }
-      ]
-    },
-    "og_title": "【兒童新聞專題】戰爭與和平──烏克蘭、俄羅斯和台灣的我們"
-  },
-  {
     "id": "5ad04bfc34eb611b008e396d",
     "slug": "migrant-workers-death-in-taiwan",
     "name": "migrant-workers-death-in-taiwan",
     "topic_name": "台灣，移工的危險之島",
-    "title": "台灣，危險之島",
+    "title": "BLACKPINK七月再來台「加開場」？2消息管道「可信度引粉絲暴動」 地點也先被公開",
     "title_position": "center",
     "subtitle": "",
     "headline": "職災地獄・移工夢碎",
@@ -1365,32 +1052,32 @@
       "height": 3088,
       "filetype": "image/jpeg",
       "width": 4112,
-      "url": "https://www.twreporter.org/images/20180413150516-e6bb687e519388dc9d75f5d841297d45.jpg",
+      "url": "https://i.imgur.com/yjP3VGu.jpg",
       "resized_targets": {
         "mobile": {
           "height": 601,
           "width": 800,
-          "url": "https://www.twreporter.org/images/20180413150516-e6bb687e519388dc9d75f5d841297d45-mobile.jpg"
+          "url": "https://i.imgur.com/yjP3VGu.jpg"
         },
         "tiny": {
           "height": 113,
           "width": 150,
-          "url": "https://www.twreporter.org/images/20180413150516-e6bb687e519388dc9d75f5d841297d45-tiny.jpg"
+          "url": "https://i.imgur.com/yjP3VGu.jpg"
         },
         "desktop": {
           "height": 1502,
           "width": 2000,
-          "url": "https://www.twreporter.org/images/20180413150516-e6bb687e519388dc9d75f5d841297d45-desktop.jpg"
+          "url": "https://i.imgur.com/yjP3VGu.jpg"
         },
         "tablet": {
           "height": 901,
           "width": 1200,
-          "url": "https://www.twreporter.org/images/20180413150516-e6bb687e519388dc9d75f5d841297d45-tablet.jpg"
+          "url": "https://i.imgur.com/yjP3VGu.jpg"
         },
         "w400": {
           "height": 300,
           "width": 400,
-          "url": "https://www.twreporter.org/images/20180413150516-e6bb687e519388dc9d75f5d841297d45-w400.jpg"
+          "url": "https://i.imgur.com/yjP3VGu.jpg"
         }
       }
     },
@@ -1403,32 +1090,32 @@
       "height": 3088,
       "filetype": "image/jpeg",
       "width": 4112,
-      "url": "https://www.twreporter.org/images/20180413150516-e6bb687e519388dc9d75f5d841297d45.jpg",
+      "url": "https://i.imgur.com/yjP3VGu.jpg",
       "resized_targets": {
         "mobile": {
           "height": 601,
           "width": 800,
-          "url": "https://www.twreporter.org/images/20180413150516-e6bb687e519388dc9d75f5d841297d45-mobile.jpg"
+          "url": "https://i.imgur.com/yjP3VGu.jpg"
         },
         "tiny": {
           "height": 113,
           "width": 150,
-          "url": "https://www.twreporter.org/images/20180413150516-e6bb687e519388dc9d75f5d841297d45-tiny.jpg"
+          "url": "https://i.imgur.com/yjP3VGu.jpg"
         },
         "desktop": {
           "height": 1502,
           "width": 2000,
-          "url": "https://www.twreporter.org/images/20180413150516-e6bb687e519388dc9d75f5d841297d45-desktop.jpg"
+          "url": "https://i.imgur.com/yjP3VGu.jpg"
         },
         "tablet": {
           "height": 901,
           "width": 1200,
-          "url": "https://www.twreporter.org/images/20180413150516-e6bb687e519388dc9d75f5d841297d45-tablet.jpg"
+          "url": "https://i.imgur.com/yjP3VGu.jpg"
         },
         "w400": {
           "height": 300,
           "width": 400,
-          "url": "https://www.twreporter.org/images/20180413150516-e6bb687e519388dc9d75f5d841297d45-w400.jpg"
+          "url": "https://i.imgur.com/yjP3VGu.jpg"
         }
       }
     },
