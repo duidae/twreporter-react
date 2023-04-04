@@ -141,6 +141,7 @@ export default class Banner extends PureComponent {
           <LeadingImage
             alt={_.get(leadingImage, 'description')}
             imgSet={_.get(leadingImage, 'resized_targets')}
+            p5Script={_.get(leadingImage, 'p5Script')}
             portraitImgSet={_.get(leadingImagePortrait, 'resized_targets')}
             viewportHeight={viewportHeight}
           />
