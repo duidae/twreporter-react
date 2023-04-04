@@ -119,7 +119,6 @@ class LeadingImage extends React.PureComponent {
   render() {
     const { isLoaded, isObjectFit, toShowPlaceholder } = this.state
     const { alt, imgSet, portraitImgSet, viewportHeight } = this.props
-    console.log(this.props)
 
     const imgJSX = isObjectFit ? (
       <StyledPicture>
